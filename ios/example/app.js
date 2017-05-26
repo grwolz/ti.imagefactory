@@ -38,7 +38,8 @@ window.open();
 
 var ImageFactory = require('ti.imagefactory');
 
-var blob = imageView.toBlob();
+file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory,  'images', 'flower.jpg');
+var blob = file.read();
 imageViewTransformed.image = blob;
 var type = 0;
 
